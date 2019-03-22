@@ -1,6 +1,4 @@
-
 from helpers import github
-
 
 
 class Worker:
@@ -24,9 +22,9 @@ class WorkerResponse:
         self.data = data
 
 
-#Test
-match_patterns = ['let', 'const', 'int', 'class', 'print', 'var']
-my_worker = Worker(50, match_patterns)
+#Example for Instance
+match_patterns = ['let', '*?@domain.com', '*-mydomain.com', 'pass*', 'class', 'print', 'var']
+my_worker = Worker(500, match_patterns)
 if __name__ == '__main__':
 
     my_worker_response = my_worker.run()
