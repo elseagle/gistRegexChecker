@@ -2,6 +2,7 @@ import unittest
 from requests.exceptions import Timeout
 from unittest.mock import Mock
 
+
 # Mock requests to control its behavior
 requests = Mock()
 
@@ -17,6 +18,7 @@ class TestLink(unittest.TestCase):
         requests.get.side_effect = Timeout
         with self.assertRaises(Timeout):
             get_gist()
+
 
 if __name__ == '__main__':
     unittest.main()
